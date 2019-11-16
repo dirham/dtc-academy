@@ -149,13 +149,15 @@ Pada python terdapat dua cara untuk melakukan perulangan atau loop, yaitu dengan
 - While
   Contoh perulangan `while` :
   ```python
+    # Membuat Tupel
+
     # Membuat List
-    list_bahasa_pemrograman = ("Python", "Ruby", "PHP", "JAVA", "Javascript", "Golang", "C", "C++", "C#")
+    tupel_bahasa_pemrograman = ("Python", "Ruby", "PHP", "JAVA", "Javascript", "Golang", "C", "C++", "C#")
     # defenisikan variable i = 0
     i = 0
     # perulangan "loop" dengan while untuk menampilkan datanya
-    while i < len(list_bahasa_pemrograman):
-    print(list_bahasa_pemrograman[i])
+    while i < len(tupel_bahasa_pemrograman):
+    print(tupel_bahasa_pemrograman[i])
     # menambahkan nilai satu pada variable i setiap kali perulangan
     i = i+1
   ```
