@@ -144,4 +144,27 @@ else:
     Sayangnya pada tupel dan list kita kita hanya bisa mengakses data menggunakan index mulai dar `0 - len()-1`. Pertanyaannya, lalu bagaimana jika saya ingin membuat data yang dapat diakses sesuai nama/index yang saya tentutkan? jawabannya adalah dengan dictionary.
     berikut contoh penggunaannya : `mydic = {"nama": "Baco", "umur": 20, "tinggi": 167.7}`
 
+### Loop
+Pada python terdapat dua cara untuk melakukan perulangan atau loop, yaitu dengan `while` dan `for`
+- While
+  Contoh perulangan `while` :
+  ```python
+    # Membuat List
+    list_bahasa_pemrograman = ("Python", "Ruby", "PHP", "JAVA", "Javascript", "Golang", "C", "C++", "C#")
+    # defenisikan variable i = 0
+    i = 0
+    # perulangan "loop" dengan while untuk menampilkan datanya
+    while i < len(list_bahasa_pemrograman):
+    print(list_bahasa_pemrograman[i])
+    # menambahkan nilai satu pada variable i setiap kali perulangan
+    i = i+1
+  ```
+- For
+  Contoh Perulangan `for` :
+  ```python
+    list_bahasa_pemrograman = ("Python", "Ruby", "PHP", "JAVA", "Javascript", "Golang", "C", "C++", "C#")
+    for bhs_pemrograman in list_bahasa_pemrograman:
+        print(bhs_pemrograman)
+  ```
+
 ### Function
