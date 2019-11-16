@@ -8,9 +8,14 @@ while i < len(list_bahasa_pemrograman):
     # menambahkan nilai satu pada variable i setiap kali perulangan
     i = i+1
 
+
 print("==================================================================================")
 
 print("menampilkan data pada variable \"list_bahasa_pemrograman\" dengan for loop")
 print("==================================================================================")
 for bhs_pemrograman in list_bahasa_pemrograman:
     print(bhs_pemrograman)
+
+mydict = {"nama": "Baco", "umur": 20, "tinggi": 167.7}
+for dic in mydict:
+    print("data pada " + str(mydict[dic]))
