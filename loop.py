@@ -17,5 +17,6 @@ for bhs_pemrograman in list_bahasa_pemrograman:
     print(bhs_pemrograman)
 
 mydict = {"nama": "Baco", "umur": 20, "tinggi": 167.7}
-for dic in mydict:
-    print("data pada " + str(mydict[dic]))
+for dic, value in mydict.items():
+    print("data pada index "+ dic + " adalah : " + str(value))
+
