@@ -1,7 +1,10 @@
-def cal_me(param):
-    nilai = param + 1
-    return cal_me(nilai)
+def cal_me(life):
+    if life < 1:
+        print(life)
+        return 0
+    print("masih ada nyawa "+ str(life))
+    return cal_me(life - 1) + cal_me(life - 2)
 
-hasil = cal_me(1)
+hasil = cal_me(6)
 
 print(hasil)
