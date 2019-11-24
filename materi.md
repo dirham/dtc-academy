@@ -274,6 +274,7 @@ Pada python terdapat dua cara untuk melakukan perulangan atau loop, yaitu dengan
             print("Saya turunannya class Vehicle, dipanggil dari method cycle_method pada class Cycle")
 
     cycle = Cycle()
+    cycle.vehicle_method()
     cycle.cycle_method()
     ```
     ### Review Knowledge 
