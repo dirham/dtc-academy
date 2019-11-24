@@ -3,7 +3,7 @@ def cal_me(life):
         print(life)
         return 0
     print("masih ada nyawa "+ str(life))
-    return cal_me(life - 1) + cal_me(life - 2)
+    return cal_me(life - 1) 
 
 hasil = cal_me(6)
 

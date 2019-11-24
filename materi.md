@@ -170,3 +170,122 @@ Pada python terdapat dua cara untuk melakukan perulangan atau loop, yaitu dengan
   ```
 
 ### Function
+- Cara mendefenisikan function
+  pertama buat file bernama coba_func.py
+    ```python
+        # membuat fungsi tanpa parameter dan nilai kembalian (return)
+        def nama_function_bebas():
+            print("saya adalah function/fungsi")
+
+        # membuat fungsi dengan parameter dan nilai kembalian
+        def nama_function_bebas_dengan_param(a,b):
+            return a + b
+        
+    ```
+- Cara memanggil function di file yang sama
+    ```python
+        # jika memanggil fungsi di file yang sama cukup tuliskan nama fungsinya dan masukkan parameternya jika ada, jika tidak ada paramter kosongkan
+        
+        nama_function_bebasnama_function_bebas() # akan memprint : saya adalah function/fungsi
+        hasil = nama_function_bebas_dengan_param(1,2) # 1 adalah nilai yang di berikan ke pada parameter a dan 2 adalah nilai untuk param b
+        print(hasil) # akan mengeluarkan nilai dari return a + b yaitu 1 + 2
+    ```
+- Cara memanggil function di file yang berbeda
+    ```python
+        # import seperti yang pernah di bahas, digunakan untuk memanggil isi file python lain
+        from coba_func import nama_function_bebas, nama_funciton_bebas_dengan_param
+
+        # setelah di import maka kita tinggal memanggil fungsinya
+        nama_function_bebasnama_function_bebas() # akan memprint : saya adalah function/fungsi
+        hasil = nama_function_bebas_dengan_param(1,2) # 1 adalah nilai yang di berikan ke pada parameter a dan 2 adalah nilai untuk param b
+        print(hasil) # akan mengeluarkan nilai dari return a + b yaitu 1 + 2
+    
+### Class
+
+- Hal - hal yang perlu di perhatikan pada `class` untuk materi ini
+  1. Object
+  2. Constructor __init__
+  3. Attribute
+  4. Method
+  5. Inheritance
+  6. Property, Setter & Getter
+1. Object dibuat dengan `constructor` pada sebuah class
+2. Constructor 
+   consturctor adalah method spesial pada class python, setiap kita mendeklarasikan/membuat class baru maka python otomatis akan membuat constructor method (default) tanpa perameter.
+   untuk mendeklarasikan constructor secara explisit maka buat sebuah function dengan nama `__init__():`
+   contoh :
+   ```python
+    class Human:
+        def __init__():
+            pass
+   ```
+3. Attribute
+   Attribute adalah `variable` yang di defenisikan dalam sebuah `class` 
+   pada python terdapat `access modifier` atau hak akses pada sebuah atribut, contoh pembuatan attribute beserta hak aksesnya.
+   ```python
+    class Motor:
+        def __init__(self):
+            print ("Di statar")
+            self.nama = "Jirayya" # public sesuai nama, 
+            self.__pembuat = "Kappa" # private, hanya dapat di akses lewat class itu sendiri
+            self._keluaran = 2019 # protected, hanya bisa di akses lewat class itu sendiri dan turunannya.
+    ```
+
+4. Method
+   Method adalah fungsi yang di defenisikan di dalam `body class`, kita telah membahas bahwa `__init__()` adalah spesial method pada `class` python, nah untuk mendefenisikan method di dalam sebuah class tidak lah sulit, pembuatannya sama saja dengan sebuah `function` biasa hanya saja dibuat di dalam `class`. contoh :
+   ```python
+    class Motor:
+        def __init__(self):
+            print ("Di statar")
+            self.nama = "Jirayya"
+            self.__pembuat = "Kappa"
+            self._keluaran = 2019
+        def nge_gas(self,type_kenalpot):
+            if type_kenalpot == "bogar":
+                print("brooombbbbbbbbooooomm.. brooombbbbbbbbooooomm.. brooombbbbbbbbooooomm." )
+            else:
+                print("ngeengggg... ngeenngg.. ngeenngg...")
+
+        # panggil class
+        motor_ari = Motor()
+
+        print(motor_ari.nama)
+        motor_ari.nge_gas("bogar")
+        motor_ari._keluaran = "mm"
+        print(motor_ari._keluaran) # protected atribute masih bisa di panggil atau di ubah.
+        #print(motor_ari.__pembuat) # hilangkan komentar dan coba jalankan
+    ```
+5. Inheritance
+   Inheritance atau pewarisan, sebuah `class` dapat mewariskan attribute dan method. caranya adalah dengan melalu pewarisan. di python cara untuk melakukan pewarisan adalah sebagai berikut: 
+   ```python
+   # class Vehicle adalah induk class
+    class Vehicle:
+        def vehicle_method(self):
+            print("Halo saya induknya class")
+
+    # Car adalah turunan (child) dari Vehicle
+    class Car(Vehicle):
+        def car_method(self):
+            print("Saya turunannya class Vehicle, dipanggil dari method car_method pada class Car")
+
+    # sama sepeerti car, Cycle juga turunan dari Vehicle
+    class Cycle(Vehicle):
+        def cycle_method(self):
+            print("Saya turunannya class Vehicle, dipanggil dari method cycle_method pada class Cycle")
+
+    cycle = Cycle()
+    cycle.cycle_method()
+    ```
+    ### Review Knowledge 
+
+    1. Final project 1
+    kita telah belajar tentang list, tupel, dan dict sebelumnya. dengan bekal materi itu buatlah sebuah data structur baru yang bernama linkedList. mengapa dan apa? pada list/array ada beberapa kekurangan salah satunya adalah ketika kita melakukan insert `sebuah_list.insert(1, 10)` maka yang terjadi di balik layar adalah python akan melakukan `loop` untuk menyusun ulang listnya. berbeda dengan list, linkedList mengetahui `siap dan apa` yang berada di sebelah kanannya, jadi ketika kita menginsertkan sebuah data maka akan lebih operasi yang terjadi adalah simpan nilai dari posisi index lama, masukkan nilai baru dan geser index lama ke sebelah kanan, begitu setursnya. Tugas anda adalah membuat sebuah class linkedList
+
+    1. Final project 2
+    Buat sebuah program yang akan menerima inputan a dan b, asumsikan adalah nilai pada `a` dan `b` adalah bilangan bulat 1-1000. program harus meng-genrate random data contoh `[38,90,34,75]` dengan nilai di dalam list tidak boleh kurang dari nilai `a` dan tidak boleh lebih besar dari nilai `b`. setalah mendapatkan nilai random urutkan nilai tersebut, program harus memprint nilai random dan nilai yang telah di urutkan!
+    ```
+    hint : 
+     - random
+     - perulangan
+     - function/class/method
+    ```
