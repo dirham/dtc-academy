@@ -280,10 +280,10 @@ Pada python terdapat dua cara untuk melakukan perulangan atau loop, yaitu dengan
     ### Review Knowledge 
 
     1. Final project 1
-    kita telah belajar tentang list, tupel, dan dict sebelumnya. dengan bekal materi itu buatlah sebuah data structur baru yang bernama linkedList. mengapa dan apa? pada list/array ada beberapa kekurangan salah satunya adalah ketika kita melakukan insert `sebuah_list.insert(1, 10)` maka yang terjadi di balik layar adalah python akan melakukan `loop` untuk menyusun ulang listnya. berbeda dengan list, linkedList mengetahui `siap dan apa` yang berada di sebelah kanannya, jadi ketika kita menginsertkan sebuah data maka akan lebih operasi yang terjadi adalah simpan nilai dari posisi index lama, masukkan nilai baru dan geser index lama ke sebelah kanan, begitu setursnya. Tugas anda adalah membuat sebuah class linkedList
+    kita telah belajar tentang list, tupel, dan dict sebelumnya. dengan bekal materi itu buatlah sebuah data structur baru yang bernama linkedList. mengapa dan apa? pada list/array ada beberapa kekurangan salah satunya adalah ketika kita melakukan insert `sebuah_list.insert(1, 10)` maka yang terjadi di balik layar adalah python akan melakukan `loop` untuk menyusun ulang listnya. berbeda dengan list, linkedList mengetahui `siap dan apa` yang berada di sebelah kanannya, jadi ketika kita menginsertkan sebuah da ta maka akan lebih operasi yang terjadi adalah simpan nilai dari posisi index lama, masukkan nilai baru dan geser index lama ke sebelah kanan, begitu setursnya. Tugas anda adalah membuat sebuah class linkedList
 
     1. Final project 2
-    Buat sebuah program yang akan menerima inputan a dan b, asumsikan adalah nilai pada `a` dan `b` adalah bilangan bulat 1-1000. program harus meng-genrate random data contoh `[38,90,34,75]` dengan nilai di dalam list tidak boleh kurang dari nilai `a` dan tidak boleh lebih besar dari nilai `b`. setalah mendapatkan nilai random urutkan nilai tersebut, program harus memprint nilai random dan nilai yang telah di urutkan!
+    Buat sebuah program yang akan menerima inputan a, b dan c, asumsikan adalah nilai pada `a`, `b` dan `c` adalah bilangan bulat 1-1000. program harus meng-genrate random data contoh `[38,90,34,75]` dengan nilai di dalam list tidak boleh kurang dari nilai `a` dan tidak boleh lebih besar dari nilai `b`. setalah mendapatkan nilai random urutkan nilai tersebut, program harus memprint nilai random dan nilai yang telah di urutkan!
     ```
     hint : 
      - random
